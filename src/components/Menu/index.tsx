@@ -1,13 +1,15 @@
 import React from "react";
-import { HeaderMenu, MenuItem } from "../Menu";
-
+import { HeaderMenu } from "./Menu";
+import { MenuItem } from "./MenuItem";
 import logo from "../../assets/images/CNN.svg";
 
-export const Header = () => {
+function Test() {
   return (
     <HeaderMenu logo={logo}>
       <MenuItem></MenuItem>
       <MenuItem></MenuItem>
     </HeaderMenu>
   );
-};
+}
+
+export { HeaderMenu, MenuItem };

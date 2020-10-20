@@ -5,37 +5,61 @@
   background: linear-gradient(#fff, rgb(241, 241, 241));
   position: relative;
   display: block;
+  box-shadow: 1px 1px 5px gray;
+
   .logo {
     margin: calc(var(--heigth) / 4) 4rem;
     height: calc(var(--heigth) / 2);
   }
+
   ul {
-    --item-width: 100px;
+    --item-width: 110px;
     margin-top: 0;
     top: 0;
+    right: 4rem;
     display: inline-block;
     position: absolute;
+
     li {
       width: var(--item-width);
       line-height: var(--heigth);
       margin-top: 0;
+      color: #000;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
       text-align: center;
-      display: inline-block;
-    }
-    .active {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      cursor: pointer;
       position: relative;
+      transition: color 0.5;
+      display: inline-block;
+
+      &:hover {
+        color: rgb(35, 130, 255);
+      }
+
       &:after {
         content: "";
+        --border-width: 2px;
         top: 0;
         left: 0;
-        height: calc(var(--heigth) - 2px);
+        height: calc(var(--heigth) - var(--border-width));
         width: var(--item-width);
         position: absolute;
         display: inline-block;
-        border-bottom: 2px solid rgb(35, 130, 255);
+        border-bottom: var(--border-width) solid rgb(35, 130, 255);
+        transform: scaleX(0);
+        transition: all 0.2s;
+        transform-origin: center;
+      }
+    }
+
+    .active {
+      color: rgb(35, 130, 255);
+      &:after {
+        transform: scaleX(1);
       }
     }
   }

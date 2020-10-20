@@ -7,5 +7,6 @@ interface IProps {
 }
 
 export const MenuItem = (props: IProps) => {
-  return <li {...props} className={styleSheet.active}></li>;
+  const { children } = props;
+  return <li {...props}>{children}</li>;
 };

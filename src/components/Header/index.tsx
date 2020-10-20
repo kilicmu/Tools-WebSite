@@ -5,9 +5,9 @@ import logo from "../../assets/images/CNN.svg";
 
 export const Header = () => {
   return (
-    <HeaderMenu logo={logo}>
-      <MenuItem></MenuItem>
-      <MenuItem></MenuItem>
+    <HeaderMenu logo={{ path: logo }}>
+      <MenuItem>首页唱唱唱的的的</MenuItem>
+      <MenuItem>全部</MenuItem>
     </HeaderMenu>
   );
 };

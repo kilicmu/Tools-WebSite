@@ -1,10 +1,42 @@
-.logo {
-  width: 100px;
-  height: 100px;
-}
 .MenuHeader {
+  --heigth: 70px;
   width: 100vw;
-  height: 100px;
-  background-color: aqua;
+  height: var(--heigth);
+  background: linear-gradient(#fff, rgb(241, 241, 241));
+  position: relative;
   display: block;
+  .logo {
+    margin: calc(var(--heigth) / 4) 4rem;
+    height: calc(var(--heigth) / 2);
+  }
+  ul {
+    --item-width: 100px;
+    margin-top: 0;
+    top: 0;
+    display: inline-block;
+    position: absolute;
+    li {
+      width: var(--item-width);
+      line-height: var(--heigth);
+      margin-top: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      text-align: center;
+      display: inline-block;
+    }
+    .active {
+      position: relative;
+      &:after {
+        content: "";
+        top: 0;
+        left: 0;
+        height: calc(var(--heigth) - 2px);
+        width: var(--item-width);
+        position: absolute;
+        display: inline-block;
+        border-bottom: 2px solid rgb(35, 130, 255);
+      }
+    }
+  }
 }

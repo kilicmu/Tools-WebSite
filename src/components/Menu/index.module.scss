@@ -1,5 +1,5 @@
 .MenuHeader {
-  --heigth: 70px;
+  --heigth: 60px;
   width: 100vw;
   height: var(--heigth);
   background: linear-gradient(#fff, rgb(241, 241, 241));
@@ -33,7 +33,7 @@
       -moz-user-select: none;
       cursor: pointer;
       position: relative;
-      transition: color 0.5;
+      transition: all 0.5;
       display: inline-block;
 
       &:hover {

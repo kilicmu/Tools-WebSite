@@ -1,6 +1,6 @@
 import React from "react";
 import styleSheet from "./index.module.scss";
-import loading from "../../assets/gifs/loading.gif";
+import loading from "../../assets/gifs/loading2.gif";
 
 const Loading = () => {
   return (

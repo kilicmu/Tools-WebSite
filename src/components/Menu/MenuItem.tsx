@@ -1,4 +1,5 @@
-import React from "react";
+import React, { createRef, useEffect, useRef } from "react";
+import { useHistory, useLocation } from "react-router";
 import styleSheet from "./index.module.scss";
 
 interface IProps {

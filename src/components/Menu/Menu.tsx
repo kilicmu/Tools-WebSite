@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { pathToFileURL } from "url";
 import styleSheet from "./index.module.scss";
-import { Router, Route, Link } from "react-router-dom";
 
 interface ILogo {
   path: string;

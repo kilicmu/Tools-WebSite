@@ -5,8 +5,9 @@
   bottom: 0;
   background: #fff;
   background-attachment: fixed;
-  opacity: 0.8;
+  filter: blur(0.5);
   position: fixed;
+  -webkit-filter: blur(0.5);
 }
 
 .LoadingImg {

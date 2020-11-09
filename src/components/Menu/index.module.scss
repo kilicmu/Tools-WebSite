@@ -21,7 +21,7 @@
     position: absolute;
 
     li {
-      width: var(--item-width);
+      // width: var(--item-width);
       line-height: var(--heigth);
       margin-top: 0;
       color: #000;
@@ -46,7 +46,7 @@
         top: 0;
         left: 0;
         height: calc(var(--heigth) - var(--border-width));
-        width: var(--item-width);
+        width: 100%;
         position: absolute;
         display: inline-block;
         border-bottom: var(--border-width) solid rgb(35, 130, 255);

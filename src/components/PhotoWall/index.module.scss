@@ -24,19 +24,42 @@
   }
 
   .Photo {
-    width: 100px;
-    height: 100px;
+    --size: 86px;
+    width: var(--size);
+    height: var(--size);
     border-radius: 10%;
     cursor: pointer;
     margin: 20px 40px;
     position: relative;
-    &:after {
-      content: "";
+
+    .progress {
       left: 0;
-      right: 0;
-      width: 100px;
-      height: 100px;
+      top: 0;
+      border-radius: 10%;
+      width: var(--size);
+      height: var(--size);
+      backdrop-filter: blur(2px);
+      background-color: rgba(83, 83, 83, 0.452);
       position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .delete {
+        width: 1em;
+        height: 1em;
+        right: -0.4em;
+        top: -0.4em;
+        border-radius: 0.5em;
+        position: absolute;
+        background: red;
+      }
+      .ProgressBar {
+        width: 60px;
+        height: 20px;
+        border-radius: 10px;
+        background-color: rgb(27, 27, 27);
+        opacity: 1;
+      }
     }
   }
 }

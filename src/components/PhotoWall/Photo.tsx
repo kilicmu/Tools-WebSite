@@ -1,5 +1,5 @@
 import { url } from "inspector";
-import React from "react";
+import React, { createRef, useState } from "react";
 import styleSheet from "./index.module.scss";
 
 interface IProps {
@@ -10,6 +10,9 @@ interface IProps {
 
 export const Photo = (props: IProps) => {
   const { src } = props;
+  const [showable, changeShowable] = useState(true);
+  const ref = createRef<HTMLDivElement>();
+  const reverseShowState = () => changeShowable((val) => !val);
   return (
     <div
       className={styleSheet.Photo}
@@ -18,6 +21,17 @@ export const Photo = (props: IProps) => {
         backgroundPositionX: "45%",
         backgroundPositionY: "45%",
       }}
-    />
+      onMouseEnter={reverseShowState}
+      onMouseLeave={reverseShowState}
+    >
+      <div
+        className={styleSheet.progress}
+        ref={ref}
+        style={{ visibility: showable ? "visible" : "hidden" }}
+      >
+        <div className={styleSheet.delete}></div>
+        <div className={styleSheet.ProgressBar}></div>
+      </div>
+    </div>
   );
 };

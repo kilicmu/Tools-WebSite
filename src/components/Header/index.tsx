@@ -17,10 +17,10 @@ export const Header = () => {
 
   return (
     <HeaderMenu logo={{ path: logo }}>
-      <MenuItem name="home" onClick={goto("/")} current>
+      <MenuItem name="home" onClick={goto("/")} current style={{ width: 100 }}>
         首页唱唱唱的的的
       </MenuItem>
-      <MenuItem name="all" onClick={goto("/all")}>
+      <MenuItem name="all" onClick={goto("/all")} style={{ width: 100 }}>
         全部
       </MenuItem>
     </HeaderMenu>

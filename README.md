@@ -12,4 +12,4 @@ if you want to design this site, you can join my figma team, and give me some gu
 
 it looks like that:
 
-![home](/docs/assets/home.png)
+![home](https://github.com/kilicmu/Tools-WebSite/blob/main/docs/assets/home.png)

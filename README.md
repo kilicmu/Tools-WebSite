@@ -10,3 +10,6 @@ iam not a professional art designer, i am studying design.
 
 if you want to design this site, you can join my figma team, and give me some guidance, tks.
 
+it looks like that:
+
+![home](/docs/assets/home.png)

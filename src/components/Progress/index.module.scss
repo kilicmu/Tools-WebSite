@@ -1,0 +1,46 @@
+.progress {
+    --size: 86px;
+    left: 0;
+    top: 0;
+    border-radius: 10%;
+    width: var(--size);
+    height: var(--size);
+    backdrop-filter: blur(2px);
+    background-color: rgba(83, 83, 83, 0.452);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .delete {
+      width: 1em;
+      height: 1em;
+      right: -0.4em;
+      top: -0.4em;
+      border-radius: 0.5em;
+      position: absolute;
+    }
+    .ProgressBar {
+      width: 60px;
+      height: 20px;
+      border-radius: 10px;
+      background-color: rgb(121, 121, 121);
+      position: relative;
+      opacity: 1;
+      overflow: hidden;
+      &__mask {
+        position: absolute;
+        width: 60px;
+        height: 20px;
+        border-radius: 10px;
+        background-color: rgb(37, 37, 37);
+        left: 0;
+        top: 0;
+        transform: translate(-100%);
+        transition: translate 0.1s;
+        will-change: transform;
+      }
+    }
+}
+
+
+ 

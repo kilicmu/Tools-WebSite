@@ -16,6 +16,7 @@
     "@types/react-router-dom": "^5.1.6",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
+    "axios": "^0.21.1",
     "babel-eslint": "10.1.0",
     "babel-jest": "^24.9.0",
     "babel-loader": "8.1.0",
@@ -23,6 +24,7 @@
     "babel-preset-react-app": "^9.1.2",
     "camelcase": "^5.3.1",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
+    "classes": "^0.3.0",
     "css-loader": "3.4.2",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
@@ -37,6 +39,7 @@
     "file-loader": "4.3.0",
     "fs-extra": "^8.1.0",
     "html-webpack-plugin": "4.0.0-beta.11",
+    "http-proxy-middleware": "^1.2.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "24.9.0",
     "jest-environment-jsdom-fourteen": "1.0.1",
@@ -57,11 +60,13 @@
     "react-dom": "^16.14.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
+    "react-transition-group": "^4.4.1",
     "resolve": "1.15.0",
     "resolve-url-loader": "3.1.1",
     "sass-loader": "8.0.2",
     "semver": "6.3.0",
     "style-loader": "0.23.1",
+    "styled-components": "^5.2.3",
     "terser-webpack-plugin": "2.3.8",
     "ts-pnp": "1.1.6",
     "typescript": "~3.7.2",
@@ -151,7 +156,11 @@
     ]
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/loadable__component": "^5.13.1",
-    "@types/react-router": "^5.1.8"
-  }
+    "@types/react-router": "^5.1.8",
+    "@types/react-transition-group": "^4.4.1",
+    "@types/styled-components": "^5.1.9"
+  },
+  "proxy": "http://abiao.me:6688"
 }

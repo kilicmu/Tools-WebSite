@@ -4,14 +4,16 @@
   right: 0;
   bottom: 0;
   background: #fff;
+  opacity: 0.5;
   background-attachment: fixed;
   filter: blur(0.5);
   position: fixed;
   -webkit-filter: blur(0.5);
+  position: relative;
 }
 
 .LoadingImg {
-  width: 100px;
+  width: 64px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);

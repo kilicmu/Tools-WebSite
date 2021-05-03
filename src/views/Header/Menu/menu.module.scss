@@ -1,0 +1,97 @@
+.menu-header {
+  --header-heigth: 75px;
+  width: 100vw;
+  height: var(--header-heigth);
+  background: linear-gradient(#fff, rgb(241, 241, 241));
+  box-shadow: 1px 1px 5px gray;
+  left: 0px;
+  top: 0px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  z-index: 99;
+  .menu-header__content {
+    height: var(--header-heigth);
+    padding: 0 100px;
+    position: relative;
+    .logo {
+      width: 49px;
+      height: 60px;
+      margin-top: 7px;
+    } 
+ 
+    ul {
+      --menu-width: 874px;
+      --menu-item-width: 134px;
+      width: var(--menu-width);
+      height: var(--heigth);
+      justify-content: flex-end;
+      float: right;
+      display: flex;
+      li {
+        width: var(--menu-item-width);
+        height: var(--header-heigth);
+        line-height: var(--header-heigth);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        align-items: center;
+        text-align: center;
+        color: #828282;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.5;
+        display: inline-block;
+        &:hover {
+          color: rgb(35, 130, 255);
+        }
+      
+        &:after {
+          content: "";
+          --border-width: 3px;
+
+          width: 100%;
+          height: calc(var(--heigth) - var(--border-width));
+          border-bottom: var(--border-width) solid #2D9CDB;
+          transform: scaleX(0);
+          transition: all 0.2s;
+          transform-origin: center;
+
+          top: calc(var(--header-heigth) - var(--border-width));
+          left: 0;
+          position: absolute;
+          display: inline-block;
+        }
+      }
+ 
+      .active {
+        color: rgb(35, 130, 255);
+        &:after {
+          transform: scaleX(1);
+        }
+      }
+  }
+  } 
+
+  .avator {
+    --avator-size: 45px;
+    position: absolute;
+    width: var(--avator-size);
+    height: var(--avator-size);
+    left: 0%;
+    right: 33.33%;
+    top: 0%;
+    bottom: 0%;
+    border-radius: 50%;
+    background-color: gray;
+  }
+  .down-icon {
+    left: 81.94%;
+    right: 0%;
+    top: 43.75%;
+    bottom: 43.75%;
+    position: absolute;
+  }
+}

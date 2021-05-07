@@ -1,0 +1,124 @@
+.container {
+    padding: 60px 400px 0;
+    display: flex;
+    font-size: 20px;
+    &__tags {
+        background-color: chocolate;
+        flex: 1;
+        .title-container{
+            border-bottom: 2px solid #D6D6D6;
+            &__label{
+                width: 48px;
+                height: 25px;
+                font-weight: normal;
+                
+                line-height: 46px;
+                align-items: center;
+                margin: 0.6em 0 0.6em 0.6em;
+                color: #000000;
+
+            }
+            &__circle{
+                width: 22px;
+                height: 22px;
+                border-radius: 50%;
+                background: #FFFFFF;
+                box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.25);
+                margin: 0.8em 0.8em 0 0;
+                float:right;
+                cursor: pointer;
+                transition: box-shadow .4s;
+                &:active {
+                    box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.356);
+                }
+            }
+        }
+
+        .tags-container {
+            width: 100%;
+            padding: 1em .6em;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 18px;
+            &-item {
+                display: inline;
+                padding: .3em .6em;
+                border: 1px solid #2D9CDB;
+                border-radius: 1.9em;
+                margin: .3em .3em;
+                cursor: pointer;
+                &--active {
+                    background: #0084ff;
+                    color: white;
+                }
+            }
+        }
+        
+    }
+
+    &__apps{
+        font-size: 20px;
+        box-sizing: content-box;
+        margin-left: 2em;
+        background-color: cornsilk;
+        position: relative;
+        padding: 2.7em 2em;
+        flex: 3;
+        .ribbon {
+            width: 80px;
+            height: 80px;
+            top: -46px;
+            right: -67px;
+            // background: yellowgreen;
+            border-bottom: 40px solid #2D9CDB;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            transform: rotate(45deg);
+            box-shadow: 0px 6px 4px -4px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+            position: absolute;
+            span {
+                bottom: -34px;
+                left: 2px;
+                color: white;
+                position: absolute;
+                font-size: 22px;
+            }
+        }
+        .apps-box {
+            justify-content: space-between;
+            flex-flow: row wrap;
+            display: flex;
+            &__app {
+                width: 100px;
+                height: 146px;
+                cursor: pointer;
+                .logo {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    background: cadetblue;
+                    transition: box-shadow .4s, transform .4s;
+                    object-fit: cover;
+                    &:hover {
+                        transform: scale(1.05);
+                        box-shadow: 2px 2px 4px 2px rgba(128, 128, 128, 0.5);
+                    }
+                }
+                .name {
+                    margin: 6px;
+                    font-size: 24px;
+                    height: 36px;
+                    text-align: center;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    transition: color .2s;
+                    &:hover {
+                        color: #2D9CDB;
+                    }
+                }
+            }
+        }
+    }
+}

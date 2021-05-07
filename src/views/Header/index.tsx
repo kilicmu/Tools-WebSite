@@ -15,16 +15,16 @@ export const Header = () => {
 
   return (
     <HeaderMenu>
-      <MenuItem name="" onClick={goto("/")} style={{ width: 100 }} current>
+      <MenuItem name="" onClick={goto("/")}  current>
         Home
       </MenuItem>
-      <MenuItem name="tool" onClick={goto("/tool")} style={{ width: 100 }}>
+      <MenuItem name="tool" onClick={goto("/tool")} >
         Tools
       </MenuItem>
-      <MenuItem name="other" onClick={goto("/others")} style={{ width: 100 }}>
+      <MenuItem name="others" onClick={goto("/others")}>
         Others
       </MenuItem>
-      <MenuItem name="join" onClick={goto("/join-us")} style={{ width: 100 }}>
+      <MenuItem name="join-us" onClick={goto("/join-us")}>
         Join Us
       </MenuItem>
     </HeaderMenu>

@@ -1,6 +1,8 @@
 import React, { useEffect, useState }  from "react";
 import { useLocation, useRouteMatch } from "react-router";
 import styleSheet from "./menu.module.scss";
+import classNames from "classnames";
+import { useMobile } from "../../../common/resopnsive/useMobile";
 
 interface IProps {
   name: string;
@@ -16,9 +18,9 @@ export const MenuItem = (props: IProps) => {
   const [current, setCurrent] = useState(!!props.current)
   const onClick = props.onClick ? props.onClick : () => {};
   const location = useLocation()
+  const isMobile = useMobile()
 
   useEffect(() => {
-    
     const pname = location.pathname.match(/^\/(.*?)\/?$/)?.[1] ?? ''
     console.log(pname, name, !current)
     if(pname === name && !current) {
@@ -27,13 +29,17 @@ export const MenuItem = (props: IProps) => {
       setCurrent(false)
     }
   }, [location])
-  console.log('current', current)
+  
   return (
     <li
       {...props}
       key={name}
       onClick={onClick}
-      className={current ? styleSheet.active: ''}
+      className={classNames([
+        current ? styleSheet.active: '', 
+        isMobile ? styleSheet["mobile-li"] : '',
+        current && isMobile ? styleSheet["mobile-li--active"]: ''
+      ])}
       style={style ? style : undefined}
     >
       {children}

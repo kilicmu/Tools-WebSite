@@ -4,6 +4,7 @@ import ToolRoute from "./ToolRoute/index";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { loadableComponentFactory } from "../common/utils/loadableComponentFactory";
 import "./animation.css";
+import { Read } from "@views/Read";
 
 const Home = loadableComponentFactory(() => import("../views/Home"))
 const AllImages = loadableComponentFactory(() => import("../views/AllImages"))
@@ -22,6 +23,9 @@ export const AppRoutes = () => {
           </Route>
           <Route key="tool" path="/tool">
             <ToolRoute />
+          </Route>
+          <Route path="">
+            <Read />
           </Route>
         </Switch>
       </CSSTransition>

@@ -1,0 +1,18 @@
+.introduce {
+    span {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    div {
+        border-top: 10px solid rgba(45, 156, 219, 0.42);
+        width: 100px;
+        position: relative;
+        &::after {
+            content: '';
+            bottom: 0;
+            border-bottom: 2px solid #777;
+            position: absolute;
+            width: 300px;
+        }
+    }
+}

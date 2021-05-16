@@ -6,6 +6,8 @@ interface CardProps {
     height?: string | number;
     minWidth?: string | number;
     maxWidth?: string | number;
+    minHeight?: string | number;
+    maxHeight?: string | number;
     className?: string;
 }
 
@@ -13,6 +15,7 @@ const _Card = styled.div`
     background: #FFFFFF;
     border: 1px solid rgba(163, 163, 163, 0.2);
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
 `
 
 const Card = (props: PropsWithChildren<CardProps>) => {
@@ -20,12 +23,17 @@ const Card = (props: PropsWithChildren<CardProps>) => {
         width = 0,
         height = "100%",
         minWidth = 0,
-        maxWidth = '100%'
+        maxWidth = '100%',
+        minHeight = 0,
+        maxHeight = '100%'
     } = props;
     const styles = {
         width,
         height,
-        minWidth
+        minWidth,
+        minHeight,
+        maxWidth,
+        maxHeight
     }
     return <_Card style={styles} {...props}/>
 }

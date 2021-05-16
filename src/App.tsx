@@ -15,7 +15,7 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <CenterContainer>
+        <CenterContainer style={{height: window.innerHeight - 75}}>
           <AppRoutes />
         </CenterContainer>
       </div>

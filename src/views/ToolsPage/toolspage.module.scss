@@ -1,22 +1,20 @@
 .container {
-    padding: 60px 400px 0;
+    padding: 60px 340px 0;
     display: flex;
     font-size: 20px;
     &__tags {
         background-color: chocolate;
-        flex: 1;
+        flex: 8;
         .title-container{
             border-bottom: 2px solid #D6D6D6;
             &__label{
                 width: 48px;
                 height: 25px;
                 font-weight: normal;
-                
                 line-height: 46px;
                 align-items: center;
                 margin: 0.6em 0 0.6em 0.6em;
                 color: #000000;
-
             }
             &__circle{
                 width: 22px;
@@ -63,7 +61,7 @@
         background-color: cornsilk;
         position: relative;
         padding: 2.7em 2em;
-        flex: 3;
+        flex: 16;
         .ribbon {
             width: 80px;
             height: 80px;
@@ -86,12 +84,13 @@
             }
         }
         .apps-box {
-            justify-content: space-between;
+            justify-content: left;
             flex-flow: row wrap;
             display: flex;
             &__app {
                 width: 100px;
                 height: 146px;
+                padding: 24px;
                 cursor: pointer;
                 .logo {
                     width: 100px;

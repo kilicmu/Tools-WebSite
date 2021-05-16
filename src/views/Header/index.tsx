@@ -21,6 +21,9 @@ export const Header = () => {
       <MenuItem name="tool" onClick={goto("/tool")} >
         Tools
       </MenuItem>
+      <MenuItem name="read" onClick={goto("/read")}>
+        Read
+      </MenuItem>
       <MenuItem name="others" onClick={goto("/others")}>
         Others
       </MenuItem>

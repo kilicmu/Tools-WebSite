@@ -7,15 +7,16 @@
   opacity: 0.5;
   background-attachment: fixed;
   filter: blur(0.5);
-  position: fixed;
   -webkit-filter: blur(0.5);
-  position: relative;
+  z-index: 9999;
+  position: absolute;
 }
 
 .LoadingImg {
-  width: 64px;
+  width: 86px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
+  z-index: 10000;
 }

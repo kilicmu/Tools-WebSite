@@ -1,11 +1,22 @@
 .PhotoWall {
-  height: 400px;
-  margin-top: 40px;
+  height: 382px;
   background: rgb(197, 197, 197);
   display: flex;
   justify-content: flex-start;
   flex-flow: row wrap;
   overflow-y: scroll;
+  background: rgba(245, 245, 245, 0.84);
+  border-radius: 29px;
+  font-size: 16px;
+  padding: 2em 5em;
+
+  .upload-holder {
+    background: url("~@/assets/images/upload-icon.png") no-repeat;
+    background-position: center;
+    background-size: 34%;
+    width: 100%;
+    
+  }
 
   &::-webkit-scrollbar {
     width: 6px;

@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import useHomeService, { HomeService } from "./useHomeService";
+// import useHomeService, { HomeService } from "../FigureBed/useFigureBedService";
 import styled from "styled-components"
 import styleSheet from "./home.module.scss";
 import githubIcon from "@assets/images/github-icon-b.png";
@@ -21,7 +21,6 @@ const CenterHelper = styled.div`
 `
 
 const Home = () => {
-  const homeService = useHomeService()
   const history = useHistory()
   return (
     <Fragment>

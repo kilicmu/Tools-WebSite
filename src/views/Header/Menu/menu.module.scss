@@ -29,7 +29,7 @@
       float: right;
       display: flex;
       li {
-        width: var(--menu-item-width);
+        width: 100px;
         height: var(--header-heigth);
         line-height: var(--header-heigth);
         white-space: nowrap;
@@ -95,3 +95,35 @@
     position: absolute;
   }
 }
+
+.mobile-li{
+  height: 42px;
+  line-height: 42px;
+  width: 100%;
+  text-align: center;
+  &:active {
+    color: white;
+    background: rgba(65, 147, 255, 0.5);
+  }
+  &--active {
+    width: 100%;
+    background: rgba(65, 147, 255, 0.7);
+    color: white;
+  }
+}
+
+.mobile-menu-list-container {
+  width:260px;
+  height: 100%;
+  transform-origin: top;
+  perspective: 400px;
+  transition: transform .3s;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.mobile-menu-list-container--hidden {
+  transform: rotate3d(1, 0, 0, 90deg);
+}
+

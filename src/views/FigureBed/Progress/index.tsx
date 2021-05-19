@@ -1,6 +1,6 @@
 import React from "react";
 import styleSheet from "./index.module.scss";
-import cancelSVG from "../../assets/svgs/cancel.svg";
+import cancelSVG from "@assets/svgs/cancel.svg";
 
 
 interface IProgressProps {

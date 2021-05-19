@@ -3,9 +3,10 @@
     "target": "es5",
     "lib": [
       "dom",
-      "dom.iterable",
+      // "dom.iterable",
       "esnext"
     ],
+    "baseUrl": ".",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -17,9 +18,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    "paths": {
+      "@/*": ["src/*"],
+      "@views/*" : ["src/views/*"],
+      "@assets/*": ["src/assets/*"],
+      "@tools/*": ["src/tools/*"],
+      "@components/*": ["src/components/*"]
+    },
   },
   "include": [
     "src"
-  ]
+, "src/.ts"  ]
 }

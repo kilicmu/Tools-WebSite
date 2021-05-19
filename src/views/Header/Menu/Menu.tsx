@@ -3,11 +3,9 @@ import styleSheet from "./menu.module.scss";
 import logo from "@assets/images/logo.png";
 import styled from "styled-components";
 import downIcon from "@assets/images/down-icon.png"
+import { useMobile } from "../../../common/resopnsive/useMobile";
+import MobileContainer from "./MobileContainer";
 
-interface LogoInterface {
-  path: string;
-  link?: string;
-}
 
 interface HeaderProps {
   width?: string;
@@ -23,20 +21,41 @@ const UserContainer = styled.div`
   margin-left: 16px;
 `
 
+
 const _Header = ({ children }: PropsWithChildren<HeaderProps>, ref: any) => {
+  const isMobile = useMobile();
+
+  const list = () => (
+    <ul ref={ref} onClick={changeActive}>
+      {children}
+      <UserContainer>
+        <div className={styleSheet.avator}></div>
+        {!isMobile ? <img className={styleSheet['down-icon']} src={downIcon} alt={'down icon'} />:null}
+      </UserContainer>
+    </ul> 
+  )
+
   return (
     <header className={styleSheet["menu-header"]} ref={ref}>
       <div className={styleSheet["menu-header__content"]}>
         <a href='/'>
-          <img src={logo} className={styleSheet.logo} alt="logo" />
+          <img 
+            src={logo} 
+            className={styleSheet.logo} 
+            alt="logo" 
+            style={
+                isMobile ? {
+                position: "absolute",
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)'
+              } : {}
+            }
+          />
         </a>
-        <ul ref={ref} onClick={changeActive}>
-          {children}
-          <UserContainer>
-            <div className={styleSheet.avator}></div>
-            <img className={styleSheet['down-icon']} src={downIcon} alt={'down icon'}></img>
-          </UserContainer>
-        </ul>
+        {
+          isMobile ? <MobileContainer children={list()} /> : list()
+        }
       </div>
     </header>
   );
